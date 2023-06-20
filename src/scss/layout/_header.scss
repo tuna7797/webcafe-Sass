@@ -1,39 +1,54 @@
 @use "./../utils" as *;
 
-.appHeader{
+.appHeader {
   background: yellow;
   padding: rem(16px) rem(20px);
 
-  @include mobile{
+  @include mobile {
     background: $dark-brown;
     color: $white;
 
     @include flexbox(column);
   }
+
+  @include desktop {
+    position: relative;
+  }
 }
 
 // 로고
-.logo{
+.logo {
   width: rem(204px);
   height: rem(60px);
-  &__link{
+  &__link {
     display: block;
     height: 100%;
-    background: blue url(/assets/images/webcafe-logo.png);
+    background: url(/assets/images/webcafe-logo.png);
+  }
+
+  @include desktop {
+    @include posCenter;
   }
 }
 
 // 멤버 서비스
-.memberOnly{
+.memberOnly {
   background: green;
   @include flexbox($justify: flex-end);
 
-  @include mobile{
+  @include mobile {
     order: -1;
   }
 }
 
 // 검색 폼
-.searchForm{
+.searchForm {
+  &__group {
+    background: blue;
+    @include flexbox($justify: flex-end);
 
+    .formInput__input {
+      width: rem(460px);
+    }
+  }
 }
