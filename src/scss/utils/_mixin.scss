@@ -117,3 +117,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin fit($fit: cover, $posX: 50%, $posY: 50%) {
+  object-fit: $fit;
+  object-position: $posX $posY;
+}

@@ -698,4 +698,15 @@ legend {
   right: 0;
 }
 
+.twitter__userProfile {
+  aspect-ratio: 1;
+}
+.twitter__userProfileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 100% 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
