@@ -337,7 +337,6 @@ body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font: inherit;
   background-color: #fff;
-  line-height: 1.2;
 }
 
 /* 유연한 미디어 */
@@ -368,23 +367,93 @@ legend {
   margin: -1px;
 }
 
+.formInput__input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #767676;
+  background: #ffffff;
+  font-size: 0.875rem;
+}
+
+.button {
+  border: 0;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+.button--fill {
+  background: #988574;
+  color: #ffffff;
+}
+.button--outline {
+  color: #988574;
+  border: 1px solid currentColor;
+}
+
+@media (max-width: 767px) {
+  .button--burger {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 4.0625rem;
+    right: 1.25rem;
+  }
+  .button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+    background: #ffffff;
+    width: 100%;
+    height: 20%;
+    border-radius: 0.625rem;
+    left: 0;
+  }
+  .button--burgerBarTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .button--burgerBarMiddle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+@media (min-width: 768px) {
+  .button--burger {
+    display: none;
+  }
+}
+
 .appHeader {
-  background: yellow;
   padding: 1rem 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
 }
 @media (max-width: 767px) {
   .appHeader {
     background: #38302e;
     color: #ffffff;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
   }
 }
 @media (min-width: 768px) {
   .appHeader {
     position: relative;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -406,7 +475,6 @@ legend {
 }
 
 .memberOnly {
-  background: green;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -419,14 +487,26 @@ legend {
 }
 
 .searchForm__group {
-  background: blue;
+  /* background: blue; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: stretch;
+  gap: 1rem;
 }
-.searchForm__group .formInput__input {
-  width: 28.75rem;
+@media (max-width: 767px) {
+  .searchForm__group .formInput {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 768px) {
+  .searchForm__group .formInput {
+    width: 25rem;
+  }
+}
+
+.menu {
+  background: pink;
 }
 
 /*# sourceMappingURL=index.css.map */
