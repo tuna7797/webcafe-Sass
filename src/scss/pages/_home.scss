@@ -49,14 +49,19 @@
 // 추천 서적
 .book {
   &__cover {
-    background: pink;
     width: 70%;
     @include autoMargin;
     text-align: center;
+  }
 
-    &Image {
-      @include respons;
-    }
+  &__info {
+    @include flexbox($wrap: wrap, $justify: center);
+    column-gap: rem(8px);
+  }
+  @at-root .ratingStar {
+    width: 100%;
+    text-align: center;
+    font-size: rem(36px);
   }
 }
 
@@ -64,10 +69,6 @@
 .news {
   @at-root .iframeWrapper {
     @include ratio(16, 9);
-  }
-
-  iframe {
-    @include respons(width, 100%);
   }
 }
 
