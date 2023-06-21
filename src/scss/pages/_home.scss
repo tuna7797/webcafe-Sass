@@ -48,12 +48,26 @@
 
 // 추천 서적
 .book {
+  &__cover {
+    background: pink;
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+
+    &Image {
+      @include respons;
+    }
+  }
 }
 
 // 새소식
 .news {
   @at-root .iframeWrapper {
     @include ratio(16, 9);
+  }
+
+  iframe {
+    @include respons(width, 100%);
   }
 }
 
