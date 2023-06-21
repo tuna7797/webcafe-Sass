@@ -52,6 +52,9 @@
 
 // 새소식
 .news {
+  @at-root .iframeWrapper {
+    @include ratio(16, 9);
+  }
 }
 
 // 게시판
