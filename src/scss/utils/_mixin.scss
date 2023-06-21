@@ -111,3 +111,9 @@
   #{$width}: 100%;
   height: $height;
 }
+
+@mixin textOver {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
